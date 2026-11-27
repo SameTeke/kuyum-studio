@@ -2,9 +2,13 @@
 
 Kuyum Studio is a desktop application I built for jewellery wholesalers. A sales team can start with a folder of product photos, process a batch, and produce a catalogue that buyers can use to identify items by code. The same filename follows a product from its input photo to the caption in the PDF.
 
-[Open the three-page sample catalogue](./sample-catalogue.pdf). It was exported by the application's own PDF service using 17 synthetic product illustrations. The first product page holds 16 items. The seventeenth moves to the next page with its code intact.
+[Open the ring catalogue](./sample-catalogue.pdf). The desktop application's PDF exporter laid out 16 real product photographs in a four-by-four grid after the cover. The captions KS-01 through KS-16 are references assigned for this portfolio edition.
 
-![First product page of the sample catalogue showing 16 labelled items in a four-by-four grid](./catalogue-page.png)
+![Sixteen ring photographs with their catalogue references](./catalogue-page.png)
+
+## Try the batch processor
+
+The [runnable Node.js example](./batch-example/) converts product images into WebP, records individual failures and resumes from verified outputs. It includes synthetic inputs, matching outputs, a measured run and tests for interruption and recovery.
 
 ## Preparing the photographs
 
@@ -22,4 +26,4 @@ Keeping captions attached to their images matters in a wholesale order. The buye
 
 The Windows desktop client uses Electron, React and TypeScript. The main process handles files, Sharp prepares images and pdfmake produces the document. A Fastify service handles the remote processing requests. PDF export can work from an existing folder of images.
 
-For this showcase, the application's regression suites for image processing, catalogue layout and catalogue rules passed all **28 tests**. The sample was generated locally with the project's fixture generator and PDF service. Its three rendered pages and all 17 captions were checked. The preview illustrates catalogue layout using synthetic inputs.
+For this showcase, the application's regression suites for image processing, catalogue layout and catalogue rules passed all **28 tests**. The ring catalogue was exported locally. Both pages and all 16 product captions were verified.

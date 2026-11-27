@@ -1,0 +1,16 @@
+{
+  "name": "kuyum-batch-example",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "batch": "node batch.mjs",
+    "test": "node --test batch.test.mjs"
+  },
+  "dependencies": {
+    "sharp": "0.35.4"
+  }
+}
